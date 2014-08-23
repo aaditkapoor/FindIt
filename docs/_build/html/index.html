@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>FINDIT &mdash; FindIt 1.0.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="FindIt 1.0.0.0 documentation" href="#" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="#">FindIt 1.0.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+<div class="section" id="findit">
+<h1>FINDIT<a class="headerlink" href="#findit" title="Permalink to this headline">¶</a></h1>
+<p>FindIt is a program that find a given word or a letter in any file and then highlights that searched item.</p>
+<p>It is provided with &#8216;Words.info&#8217; for searching but you can also change it, The program comes with command line capabilties.</p>
+<p>History.info is file which records your search history, this is file is very important.</p>
+<p><strong>FindIt comes with command line option like-:</strong></p>
+<ol class="arabic simple">
+<li>&#8211;sw (Search only a word)</li>
+<li>&#8211;se (Search everything, mainly for letters. Default option)</li>
+<li>&#8211;h (Some basic help)</li>
+<li>&#8211;v (Version of the program)</li>
+</ol>
+</div>
+<div class="section" id="command-line-options">
+<h1>Command Line Options<a class="headerlink" href="#command-line-options" title="Permalink to this headline">¶</a></h1>
+<p>In FindIt, there are various options that can make your search better, these are only available from the command line.
+FindIt consists of three command line arguments,</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you enter any one of the command line option then you have to provide all the command line options.</p>
+</div>
+<ul class="simple">
+<li>sys.argv[0] -&gt; Program name (find.py)</li>
+<li>sys.argv[1] -&gt; Word or a letter to be searched</li>
+<li>sys.argv[2] -&gt; File that is to be searched</li>
+<li>sys.argv[3] -&gt; Search option (&#8211;se, &#8211;sw, &#8211;li, &#8211;h)</li>
+</ul>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Command Line options only work in the command line, except for &#8211;se option</p>
+</div>
+<div class="topic">
+<p class="topic-title first">Behaviour of Command Line Options</p>
+<ul>
+<li><dl class="first docutils">
+<dt>&#8211;se <span class="classifier-delimiter">:</span> <span class="classifier">Stands for <strong>Search Everthing</strong></span></dt>
+<dd><p class="first last">It searches for everything including a letter.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>&#8211;sw <span class="classifier-delimiter">:</span> <span class="classifier">Stands for <strong>Search a Word</strong></span></dt>
+<dd><p class="first last">It searches for a specific word and show its occurences in the file, in the form (Words: &lt;yoursearchitem&gt; Occurences:&lt;n number of times&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>&#8211;li <span class="classifier-delimiter">:</span> <span class="classifier">Stands for <strong>license</strong></span></dt>
+<dd><p class="first last">It shows the license.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>&#8211;h <span class="classifier-delimiter">:</span> <span class="classifier">Stands for <strong>help</strong></span></dt>
+<dd><p class="first last">Displays this file</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title first">Simple examples for terminal</p>
+<ol class="arabic simple">
+<li>$ python find.py aa Words.info &#8211;se</li>
+<li>$ python find.py aa Words.info &#8211;sw</li>
+<li>$ python find.py aa Words.info &#8211;h</li>
+<li>$ python find.py aa Words.ingo &#8211;li</li>
+</ol>
+</div>
+</div>
+<div class="section" id="directory-structure">
+<h1>Directory Structure<a class="headerlink" href="#directory-structure" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Only for the project
+<strong>BOLD</strong>  means that it is a folder
+<em>ITALICS</em> means that it is a file</p>
+</div>
+<ol class="arabic">
+<li><dl class="first docutils">
+<dt><strong>FINDIT FOLDER</strong></dt>
+<dd><p class="first last"><em>find.py</em>
+<strong>docs</strong></p>
+</dd>
+</dl>
+</li>
+</ol>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">FINDIT</a></li>
+<li><a class="reference internal" href="#command-line-options">Command Line Options</a></li>
+<li><a class="reference internal" href="#directory-structure">Directory Structure</a></li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li><a href="#">FindIt 1.0.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Aadit Kapoor.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

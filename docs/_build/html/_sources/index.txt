@@ -1,0 +1,76 @@
+.. FindIt documentation master file, created by
+   sphinx-quickstart on Mon Aug 18 06:58:15 2014.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+
+.. toctree::
+   :maxdepth: 2
+
+
+FINDIT
+=============
+FindIt is a program that find a given word or a letter in any file and then highlights that searched item.
+
+It is provided with 'Words.info' for searching but you can also change it, The program comes with command line capabilties.
+
+History.info is file which records your search history, this is file is very important.
+
+**FindIt comes with command line option like-:**
+
+
+1. --sw (Search only a word)
+2. --se (Search everything, mainly for letters. Default option)
+3. --h (Some basic help)
+4. --v (Version of the program)
+
+
+Command Line Options
+=====================
+In FindIt, there are various options that can make your search better, these are only available from the command line.
+FindIt consists of three command line arguments,
+
+.. note:: If you enter any one of the command line option then you have to provide all the command line options.
+
+* sys.argv[0] -> Program name (find.py)
+* sys.argv[1] -> Word or a letter to be searched
+* sys.argv[2] -> File that is to be searched
+* sys.argv[3] -> Search option (--se, --sw, --li, --h)
+
+.. warning:: Command Line options only work in the command line, except for --se option
+
+.. topic:: Behaviour of Command Line Options
+          
+          * --se : Stands for **Search Everthing**
+                  It searches for everything including a letter.
+          * --sw : Stands for **Search a Word**
+                   It searches for a specific word and show its occurences in the file, in the form (Words: <yoursearchitem> Occurences:<n number of times>)
+          * --li : Stands for **license**
+                   It shows the license.
+          * --h : Stands for **help**
+                  Displays this file
+
+.. topic:: Simple examples for terminal
+
+           1. $ python find.py aa Words.info --se
+           2. $ python find.py aa Words.info --sw
+           3. $ python find.py aa Words.info --h
+           4. $ python find.py aa Words.ingo --li
+
+Directory Structure
+=====================
+
+.. note:: Only for the project
+          **BOLD**  means that it is a folder
+          *ITALICS* means that it is a file
+
+1. **FINDIT FOLDER**
+        *find.py*
+        **docs**
+
+
+
+
+
+
+
